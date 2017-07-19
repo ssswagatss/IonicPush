@@ -6,7 +6,7 @@ using System.Text;
 
 namespace IonicPush.CSharp.Models.Results
 {
-    public class DeviceToken
+    public class DeviceTokenVM
     {
         [JsonProperty("app_id")]
         public string AppId { get; set; }
@@ -28,8 +28,5 @@ namespace IonicPush.CSharp.Models.Results
 
         [JsonProperty("valid")]
         public string IsValid { get; set; }
-
-        [JsonProperty("meta")]
-        public Meta Meta { get; set; }
     }
 }

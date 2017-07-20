@@ -12,28 +12,40 @@ namespace IonicPush.CSharp
 {
     public class Push
     {
-        private readonly string _baseUrl = "https://api.ionic.io";
-        private readonly string _apiKey;
+        private  string _baseUrl = "https://api.ionic.io";
+        private  string _apiKey;
 
+        /// <summary>
+        /// Constructs a Push Object
+        /// </summary>
+        /// <param name="apiKey">Ionic IO API Key</param>
         public Push(string apiKey)
         {
             _apiKey = apiKey;
         }
 
-
-        public async  Task<Result<List<DeviceToken>>> GetTokens()
+        /// <summary>
+        /// Constructs a Push Object
+        /// </summary>
+        /// <param name="apiKey">Ionic IO API Key</param>
+        /// <param name="baseUrl">Ionic IO Base url</param>
+        public Push(string apiKey,string baseUrl)
         {
-            Result<List<DeviceToken>> tokens = new Result<List<DeviceToken>>();
-            using (IonicWebClient client=new IonicWebClient(_apiKey))
-            {
-                HttpResponseMessage response = await client.GetAsync("/push/tokens");
-                if (response.IsSuccessStatusCode)
-                {
-                    var jsonString = await response.Content.ReadAsStringAsync();
-                    tokens= JsonConvert.DeserializeObject<Result<List<DeviceToken>>>(jsonString);
-                }
-            }
-            return tokens;
+            _apiKey = apiKey;
+            _baseUrl = baseUrl;
         }
+        public string BaseUrl {
+            get {
+                return _baseUrl;
+            }
+        }
+        public string ApiKey
+        {
+            get
+            {
+                return _apiKey;
+            }
+        }
+
     }
 }

@@ -14,5 +14,8 @@ namespace IonicPush.CSharp.Models
 
         [JsonProperty("meta")]
         public Meta Meta { get; set; }
+
+        [JsonProperty("error")]
+        public Error Error { get; set; }
     }
 }

@@ -38,6 +38,7 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,15 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\INotification.cs" />
+    <Compile Include="Interfaces\IToken.cs" />
+    <Compile Include="Models\AndroidNotificationConfigVM.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\IOSNotificationConfigVM.cs" />
+    <Compile Include="Models\NotificationConfigVM.cs" />
+    <Compile Include="Models\NotificationOverviewErrorVM.cs" />
+    <Compile Include="Models\NotificationOverviewVM.cs" />
+    <Compile Include="Models\NotificationVM.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="Token.cs" />
     <Compile Include="IonicPush.cs" />
     <Compile Include="IonicWebClient.cs" />
     <Compile Include="Models\Meta.cs" />
     <Compile Include="Models\Result.cs" />
-    <Compile Include="Models\Results\DeviceToken.cs" />
+    <Compile Include="Models\Results\DeviceTokenVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

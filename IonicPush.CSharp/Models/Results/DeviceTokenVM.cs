@@ -8,6 +8,9 @@ namespace IonicPush.CSharp.Models.Results
 {
     public class DeviceTokenVM
     {
+        /// <summary>
+        /// App ID the Notification belongs to.
+        /// </summary>
         [JsonProperty("app_id")]
         public string AppId { get; set; }
 

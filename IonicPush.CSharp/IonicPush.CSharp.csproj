@@ -56,6 +56,7 @@
     <Compile Include="Models\NotificationOverviewErrorVM.cs" />
     <Compile Include="Models\NotificationOverviewVM.cs" />
     <Compile Include="Models\NotificationVM.cs" />
+    <Compile Include="Models\Results\CreatedNotificationVM.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="IonicPush.cs" />

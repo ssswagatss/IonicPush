@@ -14,6 +14,7 @@ namespace IonicPush.CSharp
     {
         private  string _baseUrl = "https://api.ionic.io";
         private  string _apiKey;
+        private  string _profile ="dev";
 
         /// <summary>
         /// Constructs a Push Object
@@ -34,6 +35,20 @@ namespace IonicPush.CSharp
             _apiKey = apiKey;
             _baseUrl = baseUrl;
         }
+
+        /// <summary>
+        /// Constructs a Push Object
+        /// </summary>
+        /// <param name="apiKey">Ionic IO API Key</param>
+        /// <param name="baseUrl">Ionic IO Base url</param>
+        /// <param name="profile">Ionic IO Profile Name</param>
+        public Push(string apiKey, string baseUrl,string profile)
+        {
+            _apiKey = apiKey;
+            _baseUrl = baseUrl;
+            _profile = profile;
+        }
+
         public string BaseUrl {
             get {
                 return _baseUrl;
@@ -44,6 +59,13 @@ namespace IonicPush.CSharp
             get
             {
                 return _apiKey;
+            }
+        }
+        public string Profile
+        {
+            get
+            {
+                return _profile;
             }
         }
 
